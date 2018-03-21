@@ -1,7 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/ivanm'
 let g:netrw_dirhist_2='/Users/ivanm/Documents'
 let g:netrw_dirhist_3='/Users/ivanm/Documents/vanDev'
 let g:netrw_dirhist_4='/Users/ivanm/Documents/vanDev/numero'
 let g:netrw_dirhist_5='/Users/ivanm/Documents/vanDev/numero/js'
+let g:netrw_dirhist_6='/Users/ivanm/.vim'
+let g:netrw_dirhist_7='/Users/ivanm/.vim/bundle'
+let g:netrw_dirhist_8='/Users/ivanm/.vim'
