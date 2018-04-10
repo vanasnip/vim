@@ -6,6 +6,9 @@ set nocompatible                  " Must come first because it changes other opt
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
+filetype plugin on 		  " Omnicomplete
+set omnifunc=syntaxcomplete#Complete
+
 runtime macros/matchit.vim        " Load the matchit plugin.
 
 set showcmd                       " Display incomplete commands.
@@ -48,7 +51,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
-colorscheme topfunky-light
+colorscheme monokai 
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -76,3 +79,20 @@ map <leader>tm :tabmove
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 execute pathogen#infect()
 call pathogen#helptags()
+set clipboard=unnamed
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set t_Co=256
+syntax on
+
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
+inoremap        (  ()<Left>
+inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+
+nnoremap <S-Space> <Right>
