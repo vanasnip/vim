@@ -96,3 +96,7 @@ inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
 
 nnoremap <S-Space> <Right>
+
+
+highlight FooKey   ctermfg=cyan guifg=#00ffff
+highlight FooValue ctermfg=red  guifg=#ff0000
