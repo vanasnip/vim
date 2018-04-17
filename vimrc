@@ -18,6 +18,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'flowtype/vim-flow'
 Plugin 'chriskempson/base16-vim'
+Plugin 'w0rp/ale'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -159,3 +160,13 @@ let g:javascript_plugin_flow = 1
 let NERDTreeShowHidden=1
 map <silent> <C-n> :NERDTreeToggle<CR>
 
+"ALE config
+let g:ale_sign_column_always = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+
+" After this is configured, :ALEFix will try and fix your JS code with ESLint.
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
