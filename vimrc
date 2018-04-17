@@ -159,14 +159,9 @@ let g:javascript_plugin_flow = 1
 "NERDTree configs
 let NERDTreeShowHidden=1
 map <silent> <C-n> :NERDTreeToggle<CR>
+nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
-"ALE config
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
-
-" After this is configured, :ALEFix will try and fix your JS code with ESLint.
-let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
