@@ -12,13 +12,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree', { 'on': 'NERDTreeTogle' }
 Plugin 'ervandew/supertab'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'flowtype/vim-flow'
 Plugin 'chriskempson/base16-vim'
-Plugin 'w0rp/ale'
+"Plugin 'w0rp/ale'
+Plugin 'scrooloose/syntastic'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -159,9 +160,15 @@ let g:javascript_plugin_flow = 1
 "NERDTree configs
 let NERDTreeShowHidden=1
 map <silent> <C-n> :NERDTreeToggle<CR>
-nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>
 
-let g:ale_sign_column_always = 1
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\}
+"let g:ale_sign_column_always = 1
+"let g:ale_linters = {
+"\   'javascript': ['eslint'],
+"\}
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"FormatJSON
+com! FJSON %!python -m json.tool
