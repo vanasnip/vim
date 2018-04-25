@@ -18,6 +18,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'flowtype/vim-flow'
 Plugin 'chriskempson/base16-vim'
+Plugin 'easymotion/vim-easymotion'
 "Plugin 'w0rp/ale'
 Plugin 'scrooloose/syntastic'
 " The following are examples of different formats supported.
@@ -218,3 +219,5 @@ if exists("+showtabline")
     set showtabline=1
     highlight link TabNum Special
 endif
+
+let g:user_emmet_mode='a'    "enable all function in all mode.:
