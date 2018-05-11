@@ -221,3 +221,9 @@ if exists("+showtabline")
 endif
 
 let g:user_emmet_mode='a'    "enable all function in all mode.:
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>

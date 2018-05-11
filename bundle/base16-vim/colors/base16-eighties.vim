@@ -51,6 +51,8 @@ let s:gui0H        = "ff8700"
 let g:base16_gui0H = "ff8700"
 let s:gui0I        = "000000"
 let g:base16_gui0I = "000000"
+let s:gui0J        = "7ea1ba"
+let g:base16_gui0J = "7ea1ba"
 
 " Terminal color definitions
 let s:cterm00        = "00"
@@ -194,8 +196,8 @@ call <sid>hi("NonText",       s:gui03, "", s:cterm03, "", "", "")
 call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 call <sid>hi("StatusLine",    s:gui0I, s:gui0H, "none", "none", "none", "")
-call <sid>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm0Z, "none", "")
-call <sid>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none", "")
+call <sid>hi("StatusLineNC",  s:gui0I, s:gui0J, s:cterm03, s:cterm0Z, "none", "")
+call <sid>hi("VertSplit",     s:gui02, s:gui0I, s:cterm02, s:cterm02, "none", "")
 call <sid>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none", "")
